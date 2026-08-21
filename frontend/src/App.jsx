@@ -3,9 +3,9 @@ import axios from 'axios';
 import SimpleEditor from './components/SimpleEditor';
 
 // ============================================
-// API BASE URL — Production + Development
+// API BASE URL — Production (Render) + Development
 // ============================================
-const API_BASE = window.API_BASE || 'http://localhost:8000/api';
+const API_BASE = 'https://order-sheet-ai.onrender.com/api';
 
 function App() {
   // ============================================
