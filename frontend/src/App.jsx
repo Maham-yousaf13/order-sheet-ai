@@ -3,9 +3,9 @@ import axios from 'axios';
 import SimpleEditor from './components/SimpleEditor';
 
 // ============================================
-// API BASE URL — Production (Render) + Development
+// API BASE URL — PythonAnywhere Backend
 // ============================================
-const API_BASE = 'https://order-sheet-ai.onrender.com/api';
+const API_BASE = 'https://mahi.pythonanywhere.com/api';
 
 function App() {
   // ============================================
@@ -510,9 +510,7 @@ function App() {
   // ============================================
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* ==========================================
-          CLEAN HEADER — NO LOGO
-          ========================================== */}
+      {/* ========================================== */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div>
@@ -529,12 +527,9 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          {/* ==========================================
-              LEFT COLUMN: Mockup Generator
-              ========================================== */}
+          {/* ========================================== */}
           <div className="space-y-6">
             
-            {/* Mockup Generator Card */}
             <div className="bg-white rounded-lg shadow p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">
                 🎨 AI Mockup Generator
@@ -576,9 +571,6 @@ function App() {
               </div>
             </div>
 
-            {/* ==========================================
-                MOCKUP PREVIEW WITH EDIT OPTION
-                ========================================== */}
             {getCurrentImage() && !showEditor && (
               <div className="bg-white rounded-lg shadow p-6">
                 <h3 className="text-sm font-medium text-gray-700 mb-3">
@@ -634,9 +626,6 @@ function App() {
               </div>
             )}
 
-            {/* ==========================================
-                SIMPLE EDITOR
-                ========================================== */}
             {showEditor && getCurrentImage() && (
               <SimpleEditor 
                 imageUrl={getCurrentImage()}
@@ -646,9 +635,7 @@ function App() {
             )}
           </div>
 
-          {/* ==========================================
-              RIGHT COLUMN: Tech Pack Form
-              ========================================== */}
+          {/* ========================================== */}
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">
@@ -656,7 +643,6 @@ function App() {
               </h2>
               
               <div className="space-y-4">
-                {/* Product Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Product Name *
@@ -671,7 +657,6 @@ function App() {
                   />
                 </div>
 
-                {/* Product Description */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Product Description
@@ -686,7 +671,6 @@ function App() {
                   />
                 </div>
 
-                {/* Fabric Details */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -716,7 +700,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Size Breakdown */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Size Breakdown (Quantity)
@@ -737,7 +720,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Colors */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Colors (Pantone)
@@ -776,7 +758,6 @@ function App() {
                   </button>
                 </div>
 
-                {/* Pricing */}
                 <div className="grid grid-cols-3 gap-3">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -824,7 +805,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Shipping */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -856,7 +836,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Client Info */}
                 <div className="border-t pt-4">
                   <h4 className="text-sm font-medium text-gray-700 mb-3">Client Information</h4>
                   <div className="grid grid-cols-2 gap-3">
@@ -893,7 +872,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <button
                   onClick={createOrder}
                   disabled={!getCurrentImage()}
@@ -904,9 +882,6 @@ function App() {
               </div>
             </div>
 
-            {/* ==========================================
-                PDF PREVIEW SECTION
-                ========================================== */}
             {(pdfData || generatedOrder) && (
               <div className="bg-white rounded-lg shadow p-6 border-2 border-green-500">
                 <h3 className="text-sm font-medium text-green-700 mb-3">
@@ -960,7 +935,6 @@ function App() {
                   }</p>
                 </div>
                 
-                {/* DOWNLOAD BUTTONS */}
                 <div className="flex gap-2 mt-4">
                   <button
                     onClick={() => window.print()}
