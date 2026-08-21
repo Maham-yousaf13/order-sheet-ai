@@ -37,10 +37,7 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 # ALLOWED HOSTS
 # ============================================================
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = ['order-sheet-ai.onrender.com', '127.0.0.1', 'localhost']
 
 # Render automatically provides RENDER_EXTERNAL_HOSTNAME
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")

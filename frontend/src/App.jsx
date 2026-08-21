@@ -5,7 +5,7 @@ import SimpleEditor from './components/SimpleEditor';
 // ============================================
 // API BASE URL — PythonAnywhere Backend
 // ============================================
-const API_BASE = 'https://mahi.pythonanywhere.com/api';
+const API_BASE = 'https://order-sheet-ai.onrender.com/api';
 
 function App() {
   // ============================================
