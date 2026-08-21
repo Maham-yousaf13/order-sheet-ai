@@ -158,7 +158,7 @@ def generate_mockup(request):
     """
     
     # FORCE SET TOKEN (Emergency Fix)
-    os.environ['REPLICATE_API_TOKEN'] = 'r8_KfvmPFmyAOzir1d57zzw7a5JkCKl4vw3RUf8Z'  
+   os.environ['REPLICATE_API_TOKEN'] = os.getenv('REPLICATE_API_TOKEN', '')
     
     try:
         # Get the prompt from request
