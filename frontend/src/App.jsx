@@ -3,7 +3,7 @@ import axios from 'axios';
 import SimpleEditor from './components/SimpleEditor';
 
 // ============================================
-// API BASE URL — PythonAnywhere Backend
+// API BASE URL — Render Backend
 // ============================================
 const API_BASE = 'https://order-sheet-ai.onrender.com/api';
 
