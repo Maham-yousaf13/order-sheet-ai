@@ -1,16 +1,17 @@
+mkdir -p backend/templates
+echo '
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Sheet AI</title>
-    <link rel="stylesheet" href="/static/assets/index-*.css" />
 </head>
 <body>
     <div id="root"></div>
     <script>
-        window.API_BASE = 'https://order-sheet-ai.onrender.com/api';
+        window.API_BASE = "https://order-sheet-ai.onrender.com/api";
     </script>
-    <script type="module" src="/static/assets/index-*.js"></script>
 </body>
 </html>
+' > backend/templates/index.html
